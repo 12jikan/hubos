@@ -15,8 +15,30 @@
   },
   "devDependencies": {
     "@types/react": "17.0.15",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.0.1",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-unicorn": "^34.0.1",
+    "husky": "^7.0.1",
+    "prettier": "^2.3.2",
     "typescript": "4.3.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "prepare-commit-msg": "./.tools/git-commit-message.sh $HUSKY_GIT_PARAMS"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "tabWidth": 4,
+    "trailingComma": "all",
+    "endOfLine": "lf"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true
+    }
   }
 }
