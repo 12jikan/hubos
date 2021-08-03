@@ -30,7 +30,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint",
-      "prepare-commit-msg": "./.tools/git-commit-message.sh $HUSKY_GIT_PARAMS"
+      // "prepare-commit-msg": "./.tools/git-commit-message.sh $HUSKY_GIT_PARAMS"
     }
   },
   "prettier": {
