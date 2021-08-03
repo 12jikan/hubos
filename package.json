@@ -29,8 +29,7 @@
   },
   "husky": {
     "hooks": {
-      "precommit": "yarn lint",
-      "prepare-commit-msg": "./.tools/git-commit-message.sh $HUSKY_GIT_PARAMS"
+      "pre-commit": "yarn lint"
     }
   },
   "prettier": {
