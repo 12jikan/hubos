@@ -2,6 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
+// Imports:
+import NavbarComponent from "../components/NavbarComponent";
+
 export default function Home(): JSX.Element {
     return (
         <div className={styles.container}>
@@ -13,6 +16,8 @@ export default function Home(): JSX.Element {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+
+            <NavbarComponent />
 
             <main className={styles.main}>
                 <h1 className={styles.title}>
