@@ -31,7 +31,7 @@ export default function NavbarComponent(): JSX.Element {
 
                 <style jsx>{`
                     .nav-container {
-                        width: 100vw;
+                        width: 100%;
                         background-color: white;
                         display: grid;
                         grid-template-column: 50% 50%;

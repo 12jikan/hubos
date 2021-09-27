@@ -1,13 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function TopSelectorComponent(): JSX.Element {
-    let [items, setItems] = useState([]);
+    const [items, setItems] = useState<Object[]>([]);
+    useEffect(() => {
+        setItems([
+            {
+                name: "test",
+            },
+            {
+                name: "test",
+            },
+            {
+                name: "test",
+            },
+        ]);
+    }, []);
 
     return (
         <>
             <div className="top-container">
-                {items.map((item) => {
-                    return <div key={index}></div>;
+                {items.map((item, index) => {
+                    return (
+                        <div className="item-container" key={index}>
+                            <a>{item}</a>
+                        </div>
+                    );
                 })}
             </div>
 
@@ -15,6 +32,15 @@ export default function TopSelectorComponent(): JSX.Element {
                 .top-container {
                     display: flex;
                     flex-direction: row;
+                    justify-content: center;
+                }
+
+                .item-container {
+                    display: flex;
+                    padding: 25px;
+                    margin: 25px;
+                    background-color: black;
+                    justify-content: center;
                 }
             `}</style>
         </>
